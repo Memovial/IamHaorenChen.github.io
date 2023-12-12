@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Gallery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header> 
+            <nav id="navBar">
+                <ul>
+                    <li v-for="item in links">
+                        <a v-bind:href="item.link">{{item.description}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1>My Gallery</h1>
+        </header>   
+        <hr>
+        <section> 
+            <h3>Games I Like</h3>
+            <ul id="game_image" class="imageContainer">    
+                <li v-for="(item,index) in games">
+                    <img :src="item.game" :alt="item.description" @click='imageto(index)'>
+                </li>
+            </ul>
+            <p>
+                I'm a passionate gamer, some of my favorite games are "The Binding of Isaac," "Hades," "Zelda," and "Slay the Spire." The unpredictable 
+                nature of each playthrough, coupled with diverse gameplay and strategic depth, 
+                keeps me hooked. Whether battling through dungeons, exploring divine realms, or 
+                ascending a spire, these games offer a unique blend of challenge and discovery that I
+                 find endlessly enjoyable.</p>
+            <h3>My Hometown</h3>
+            <ul id="hometown_image" class="imageContainer">    
+                <li v-for="item in homeTown">
+                    <img :src="item.place" :alt="item.description">
+                </li>
+            </ul>
+            <p>Taishan, my small hometown in Guangdong, is more than just a place; 
+                it's the embodiment of home. It is a small village, the tight-knit community and familiar 
+                surroundings made every corner feel like a warm embrace. I've been away for years, and 
+                the yearning for the simplicity and genuine connections of Taishan pulls at my heart. 
+                Memories of shared laughter, the scent of street-side snacks, and the tranquil beauty 
+                of the countryside make me miss it deeply. Taishan isn't just where I'm from; it's where 
+                I belong, and the distance only amplifies my love for this little haven that I can't wait
+                 to revisit.
+            </p>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

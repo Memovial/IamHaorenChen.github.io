@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stock Price Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header> 
+    <nav id="navBar">
+        <ul>
+            <li v-for="item in links">
+                <a v-bind:href="item.link">{{item.description}}</a>
+            </li>
+        </ul>
+    </nav>
+</header>   
+  <div id="checkStock">
+    <label for="stockSymbol">Enter Stock Symbol:</label>
+    <input type="text" id="stockSymbol" v-model="stockSymbol" />
+    <button @click="getStockPrice">Get Stock Price</button>
+
+    <div v-if="stockPrice !== null" class="result">
+      <p>Current Price of {{ stockSymbol }}: {{ stockPrice }}</p>
+    </div>
+
+    <div v-if="errorMessage !== null" class="error">
+      <p>{{ errorMessage }}</p>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="script.js"></script>
+</body>
+</html>

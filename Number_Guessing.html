@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav id="navBar">
+        <ul>
+            <li v-for="item in links">
+                <a v-bind:href="item.link">{{item.description}}</a>
+            </li>
+        </ul>
+      </nav>
+    
+</header>
+<div id="gametime">
+  <h1>Number Guessing Game</h1>
+
+  <div v-if="!gameStarted" class="gameButton">
+    <button @click="startGame">Start Game</button>
+  </div>
+
+  <div v-if="gameStarted && !gameWon">
+    <label for="guessInput">Enter your guess (0-100): </label>
+    <input type="number" id="guessInput" v-model.number="userGuess" min="0" max="100">
+    <button @click="checkGuess">Submit Guess</button>
+    <p v-if="feedback" class="error">{{ feedback }}</p>
+  </div>
+
+  <div v-if="gameWon">
+    <p class="result">Congratulations! You guessed the correct number {{ correctNumber }}!</p>
+    <button @click="resetGame">Play Again</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="script.js"></script>
+</body>
+</html>

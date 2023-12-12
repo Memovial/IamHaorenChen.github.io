@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My Personal Site
+        </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav id="navBar">
+                <ul>
+                    <li v-for="item in links">
+                        <a v-bind:href="item.link">{{item.description}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1>
+                Welcome to my Personal Site
+            </h1>
+        </header>   
+        <section>
+            <h3>My Education Background</h3>
+            <p>
+                Hello, I'm Haoren Chen, a native of Guangdong, China. 
+                Born and raised in this vibrant province, I've been shaped by its rich culture and dynamic environment.
+                My academic journey has been a fascinating one. I pursued an undergraduate degree in economics, 
+                delving into the intricacies of market dynamics, resource allocation, and the global economy. 
+                However, my curiosity and passion for technology led me to explore a different path. Currently, 
+                I'm enrolled in a master's program in software development, where I'm immersing myself in the world of code, 
+                algorithms, and software engineering.
+            </p>
+        </section>
+        <hr>
+        <section>
+            <h3>My Personal Life</h3>
+            <p>
+                Beyond academics, I find joy in various hobbies that provide a balance to my life. 
+                Video gaming has been a long-standing interest of mine, offering an immersive escape 
+                into captivating virtual worlds and an opportunity to connect with others in the gaming 
+                community. On sunnier days, I relish the freedom of biking, exploring the world around 
+                me, and enjoying the beauty of nature.With this diverse background and a keen interest 
+                in both economics and technology, I look forward to the exciting opportunities that the 
+                future may bring, bridging the gap between these seemingly disparate fields and finding 
+                innovative solutions at their intersection.
+            </p>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

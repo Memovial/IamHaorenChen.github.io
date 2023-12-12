@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>schedule</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav id="navBar">
+                <ul>
+                    <li v-for="item in links">
+                        <a v-bind:href="item.link">{{item.description}}</a>
+                    </li>
+                </ul>
+            </nav>
+            <h1>My Current Schedule</h1>
+            
+        </header>
+        <table >
+            <caption>My Schedule</caption>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thr</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8am-12pm</td>
+                    <td>work</td>
+                    <td>rest</td>
+                    <td>work</td>
+                    <td>rest</td>
+                    <td>rest</td>
+                    <td>work</td>
+                    <td>rest</td>
+                </tr>
+                <tr>
+                    <td>1pm-6pm</td>
+                    <td>work</td>
+                    <td>study</td>
+                    <td>work</td>
+                    <td>study</td>
+                    <td>biking</td>
+                    <td>work</td>
+                    <td>study</td>
+                </tr>
+                <tr>
+                    <td>6pm-12am</td>
+                    <td>rest</td>
+                    <td>video game</td>
+                    <td>rest</td>
+                    <td>video game</td>
+                    <td>video game</td>
+                    <td>rest</td>
+                    <td>rest</td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

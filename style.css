@@ -1,0 +1,117 @@
+/* below is styling for all pages background image */
+body{
+    background-image:url("pictures/pexels-mudassir-ali-2680270.jpg");
+    margin:0px;
+    font-family: 'Arial', sans-serif;
+    font-size:20px;
+    /* justify-content: center; */
+    /* height: 100vh; */
+}
+/* below is position for check stock game*/
+#checkStock{
+    margin-left:600px;
+    margin-top:250px;
+}
+/* below is position for number guessing game*/
+#gametime{
+    margin-left:550px;
+    margin-top:200px;
+}
+/* below is styling for navigation bar*/
+nav ul{
+    background-color:#03A89E;
+    height:40px;}
+nav li{
+    display:inline;
+    font-size:30px;
+    cursor: pointer;
+}
+nav a{
+    text-decoration:none;
+    padding:20px;
+    color:#191970;
+}
+nav a:hover{
+    color:white;
+}
+/* below is styling for schedule page */
+table{
+    border:2px solid;
+    width:800px;
+    height:300px;
+    text-align:center;
+    font-size:20px;
+    border-collapse: collapse;
+
+}
+th{
+    border:2px solid;
+    font-weight:bold;
+}
+td{
+    border:2px solid;
+}
+
+.imageContainer{
+    display:flex;
+    flex-wrap:wrap;
+}
+img {
+    margin:10px;
+    width: 250px; 
+    height: 200px; 
+    object-fit: cover; 
+    transition: transform 0.3s;}
+
+img:hover {
+    transform: scale(1.5); 
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    }
+    
+input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 200px;
+    }
+    
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+.gameButton{
+    margin-left:160px;
+}
+   
+    
+button:hover {
+    background-color: #2980b9;
+}
+    
+.result {
+    margin-top: 20px;
+    color: #27ae60;
+}
+    
+.error {
+    margin-top: 20px;
+    color: #c0392b;
+}
+
+#game_image:hover{
+    cursor:pointer;
+}
+
+
+
+
+
+
+
